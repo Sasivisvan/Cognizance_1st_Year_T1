@@ -1,4 +1,5 @@
 # Import necessary libraries
+from sklearn.datasets import load_diabetes
 import pandas as pd
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.preprocessing import StandardScaler
@@ -6,24 +7,24 @@ from sklearn.linear_model import LinearRegression, Ridge
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 import numpy as np
-from sklearn.datasets import load_iris
-import pandas as pd
 
-data = load_iris()
+
+# Step 1: Load the Dataset and Convert to DataFrame
+data = load_diabetes()
 df = pd.DataFrame(data.data, columns=data.feature_names)
-df['species'] = data.target
-df.to_csv("iris.csv", index=False)
+df['progression'] = data.target
+df.to_csv("diabetes.csv", index=False)  # Save to CSV for completeness
 
 # Step 2: Preprocess the Data
 # Load the data from CSV
-df = pd.read_csv("iris.csv")
+df = pd.read_csv("diabetes.csv")
 
 # Check for missing values
 print("Missing values in dataset:\n", df.isnull().sum())
 
 # Standardize the features
-X = df.drop('species', axis=1)  # Features
-y = df['species']  # Target variable
+X = df.drop('progression', axis=1)  # Features
+y = df['progression']  # Target variable
 
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
