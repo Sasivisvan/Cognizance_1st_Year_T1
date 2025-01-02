@@ -13,7 +13,7 @@ progression    0
 dtype: int64
 As everything is 0 means no emepty or incomplete data field
 
-performance of each model as Mean Squared Error meaning sum of (predicted value - actual value)^2 divided by no of times predicted:
+Performance of each model as Mean Squared Error meaning sum of (predicted value - actual value)^2 divided by no of times predicted:
 Linear Regression - Test set Mean Squared Error: 2981.5873043126107
 Ridge Regression - Test set Mean Squared Error: 2980.9761936539035
 Random Forest Regressor - Test set Mean Squared Error: 2991.539735955056
