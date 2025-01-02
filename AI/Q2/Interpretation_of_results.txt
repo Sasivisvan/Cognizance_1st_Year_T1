@@ -1,0 +1,17 @@
+Missing values in dataset:
+ sepal length (cm)    0
+sepal width (cm)     0
+petal length (cm)    0
+petal width (cm)     0
+species              0
+dtype: int64
+As everything is 0 means no emepty or incomplete data field
+
+Performance of each model as Mean Squared Error meaning sum of (predicted value - actual value)^2 divided by no of times predicted:
+Linear Regression - Test set Mean Squared Error: 0.0723
+Ridge Regression - Test set Mean Squared Error: 0.0696
+Random Forest Regressor - Test set Mean Squared Error: 0.0542
+
+Best model based on test set: Random Forest Regressor
+
+The best model to use is (based on this test) is Random Forest Regressor
